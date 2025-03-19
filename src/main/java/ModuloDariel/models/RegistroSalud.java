@@ -1,4 +1,4 @@
-package modelo;
+package ModuloDariel.models;
 import java.time.LocalDate;
 
 /**
@@ -28,7 +28,7 @@ public int getId(){return id;}
 public void setId(int Id){this.id = id;}
 
 public int getVacaId(){return vacaId;}
-public void setvacaId(int vacaId){this.vacaId = vacaId;}
+public void setVacaId(int vacaId){this.vacaId = vacaId;}
 
 public LocalDate getFecha() { return fecha; }
 public void setFecha(LocalDate fecha) { this.fecha = fecha; }
@@ -37,26 +37,10 @@ public Vaca.EstadoSalud getEstadoSalud(){ return estadoSalud; }
 public void setEstadoSalud(Vaca.EstadoSalud estadoSalud){ this.estadoSalud = estadoSalud; }
 
 public String getDescripcion(){return descripcion;}
-public void setdescripcion(String descripcion){this.descripcion = descripcion;}
+public void setDescripcion(String descripcion){this.descripcion = descripcion;}
 
 public String getTratamiento(){return tratamiento;}
-public void settratamiento(String tratamiento){this.tratamiento = tratamiento;}
+public void setTratamiento(String tratamiento){this.tratamiento = tratamiento;}
 
-    //Metodo registrar un nuevo estado de salud
-public void actualizarRegistroSalud(Vaca.EstadoSalud nuevoEstado, String nuevaDescripcion, String nuevoTratamiento, LocalDate nuevaFecha){
-        this.fecha = nuevaFecha;
-        this.estadoSalud = nuevoEstado;
-        this.descripcion = nuevaDescripcion;
-        this.tratamiento = nuevoTratamiento;
-
-        System.out.println("Registro de salud actualizado.");
-    }
-public void mostrarRegistro() {
-    System.out.println("Registro #" + id +
-        ": Fecha: " + fecha +
-        ", Estado de salud: " + estadoSalud +
-        ", Descripción: " + descripcion +
-        ", Tratamiento: " + tratamiento);
-    }
 }
 
